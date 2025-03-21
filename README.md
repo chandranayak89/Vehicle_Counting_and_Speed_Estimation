@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Vehicle Counting and Speed Estimation
 
 A computer vision project for detecting, counting, and estimating the speed of vehicles in traffic videos.
@@ -58,3 +59,6 @@ Parameters:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 
+=======
+# Vehicle_Counting_and_Speed_Estimation
+>>>>>>> 2a9782cccdaa72c14b3b1c1f8c9dcebeca891af4
