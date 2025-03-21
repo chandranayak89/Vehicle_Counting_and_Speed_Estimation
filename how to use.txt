@@ -1,0 +1,50 @@
+Great! We've successfully created a complete Vehicle Counting and Speed Estimation project. The structure includes all the necessary components:
+main.py: The entry point that ties all components together.
+detector.py: Contains different vehicle detection methods (contour-based, Haar cascade, and YOLO).
+tracker.py: Implements the centroid tracker for vehicle tracking.
+speed_estimator.py: Contains two methods for speed estimation (fixed lines and adaptive).
+utils.py: Utility functions for preprocessing and visualization.
+requirements.txt: Lists all the required dependencies.
+README.md: Overview and documentation of the project.
+USAGE.md: Detailed usage guide with examples.
+download_sample_video.py: Script to download a sample traffic video for testing.
+videos/: Directory to store video files.
+
+How to Get Started
+
+Install the required dependencies:
+   pip install -r requirements.txt
+
+
+Download a sample traffic video:
+   python download_sample_video.py
+
+Run the vehicle detection and speed estimation:
+   python main.py --input videos/traffic_sample.mp4 --output output.mp4 --show
+
+Features of the System
+
+Vehicle detection using three different methods:
+Contour detection with background subtraction (default, works well in most scenarios)
+Haar cascade detection (simpler but less accurate)
+YOLO deep learning detection (more accurate but requires PyTorch)
+Speed estimation using two methods:
+Fixed lines method (measures time between crossing two lines)
+Adaptive method (calculates frame-to-frame movement)
+Vehicle counting with unique ID assignment for each vehicle
+Speed violation detection and logging
+Real-time visualization with bounding boxes, IDs, and speed information
+
+Customization Options
+
+You can customize the system using various command-line arguments:
+Change the detection method with --detector
+Change the speed estimation method with --speed_method
+Set a speed limit for violation detection with --speed_limit
+Adjust processing resolution with --resolution
+Show the output in real-time with --show
+
+For a complete list of options, refer to the USAGE.md file or run:
+  python main.py --help
+
+The system is designed to be modular, making it easy to extend or modify specific components based on your requirements. For optimal results, you might need to adjust parameters like the distance between lines or the pixels-per-meter ratio based on your specific video footage.
